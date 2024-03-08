@@ -89,7 +89,7 @@ if (isset($_GET['logout'])) {
         <main class="cards item">
             <div class="Heading" title>Our Courses</div>
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Digital Marketing</h4>
@@ -108,9 +108,9 @@ if (isset($_GET['logout'])) {
                         <a href="./Course Details/details.php" style="color: rgb(255, 255, 255);"> See details</a></button>
                 </div>
             </div>
-            <!-- card2 -->
+             card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Full Stack Web Development (MERN)</h4>
@@ -128,9 +128,9 @@ if (isset($_GET['logout'])) {
                     <button>See details</button>
                 </div>
             </div>
-            <!-- card2 -->
+            <!- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Full Stack Web Development with PHP and Laravel</h4>
@@ -148,9 +148,9 @@ if (isset($_GET['logout'])) {
                     <button>See details</button>
                 </div>
             </div>
-            <!-- card2 -->
+            <!- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Foundation Of Javascript</h4>
@@ -167,10 +167,10 @@ if (isset($_GET['logout'])) {
                     </div>
                     <button>See details</button>
                 </div>
-            </div>
+            </div> -->
             <!-- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Mobile Application Development With Flutter</h4>
@@ -187,10 +187,10 @@ if (isset($_GET['logout'])) {
                     </div>
                     <button>See details</button>
                 </div>
-            </div>
+            </div> -->
             <!-- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Data Analytics</h4>
@@ -207,10 +207,10 @@ if (isset($_GET['logout'])) {
                     </div>
                     <button>See details</button>
                 </div>
-            </div>
+            </div> -->
             <!-- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Product Management and Design</h4>
@@ -227,10 +227,10 @@ if (isset($_GET['logout'])) {
                     </div>
                     <button>See details</button>
                 </div>
-            </div>
+            </div> -->
             <!-- card2 -->
             <!-- card1 -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Python Player (Advanced)</h4>
@@ -247,7 +247,7 @@ if (isset($_GET['logout'])) {
                     </div>
                     <button>See details</button>
                 </div>
-            </div>
+            </div> --> 
             <!-- card2 -->
             <!-- card1 -->
             <?php

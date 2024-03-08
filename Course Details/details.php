@@ -1,9 +1,16 @@
 <?php
 include "../Login/config.php";
 session_start();
-// if (!isset($_SESSION['submit'])) {
-//     header('location:./Login/loginPaga.html');
-// }
+if (!isset($_SESSION['submit'])) {
+    echo "<script>
+    alert('You need to login first');
+    setTimeout(function() {
+        window.location.href = '../Login/LoginPaga.html';
+    }, 1000); // 2000 milliseconds (2 seconds)
+  </script>";
+   
+    exit();
+}
 
 if (isset($_GET['logout'])) {
     unset($_SESSION['name']);
@@ -34,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "Enrollment successful!";
-        header('Location: ../index.php');
+        header('Location: ../Dashboard/dash.php');
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -54,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
     <div class="container">
 
         <nav class="navbar item">
-            <div class="logo flexcenter " id="Home"><a href="../index.html" class="btnlogo"> <img src="../image/CourseitBGremoved2.png" alt=""> </a></div>
+            <div class="logo flexcenter " id="Home"><a href="../index.php" class="btnlogo"> <img src="../image/CourseitBGremoved2.png" alt=""> </a></div>
             <div class="search flexcenter navitem">
                 <input type="text" name="searchtxt" placeholder="Search for courses..." class="searchtxt">
                 <input type="submit" name="search" class="searchbtn" value="Search" title="Search">
@@ -64,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
                 <option value="">Opt2</option>
             </select>
             <a href="/Free Seminar/fsem.html" class="navitem fseminar">Free Seminar</a>
-            <a href="../Login/loginPage.html" class="navitem login" id="login">Log in</a>
+            <a href="../Login/LoginPaga.html" class="navitem login" id="login">Log in</a>
             
 
 

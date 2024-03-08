@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <?php
+    include "../Login/config.php";
     session_start();
     if(!isset($_SESSION['submit'])){
         session_destroy();
         header('location:../Login/LoginPaga.html');
+    }
+
+    
+    // Fetch enrolled courses from the database
+    $userId = $_SESSION['id'];  // Assuming user_id is the user identifier
+    $enrolledCoursesQuery = "SELECT * FROM enrollment WHERE id = $userId";
+    $enrolledCoursesResult = mysqli_query($conn, $enrolledCoursesQuery);
+
+    // Check if any enrolled courses are found
+    if ($enrolledCoursesResult) {
+        $enrolledCourses = mysqli_fetch_all($enrolledCoursesResult, MYSQLI_ASSOC);
+    } else {
+        $enrolledCourses = [];
     }
     
 ?>
@@ -72,9 +86,30 @@ whatever drawing markups you want to be linked
         </div>
     </div>
         <div class = "box">
-        
+           
+        <?php
+            // Display cards for enrolled courses
+            if (isset($enrolledCourses) && !empty($enrolledCourses)) {
+                foreach ($enrolledCourses as $course) {
+                    $courseId = $course['c_id'];
+                    // Fetch course details from the courses table based on the $courseId
+                    $courseDetailsQuery = "SELECT * FROM courses WHERE c_id = $courseId";
+                    $courseDetailsResult = mysqli_query($conn, $courseDetailsQuery);
+
+                    if ($courseDetailsResult) {
+                        $courseDetails = mysqli_fetch_assoc($courseDetailsResult);
+                        // Display the card with course details
+                        echo '<div class="course-card">';
+                        echo '<h3>' . $courseDetails['c_name'] . '</h3>';
+                        // Add other course details as needed
+                        echo '</div>';
+                    }
+                }
+            } else {
+                echo '<p>No enrolled courses found.</p>';
+            }
+        ?>
         </div>
-       
     </div>
 </body>
 
