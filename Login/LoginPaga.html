@@ -1,0 +1,72 @@
+<!-- if($_GET['error']){
+    echo "<script>alert('Invalid email or password!')</script>";
+} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login at CourseitBD</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar item">
+             <div class=" flexcenter" id="Home"><a class="logo" href="../index.php"></a></div>
+
+            <div class="search flexcenter navitem">
+                <input type="text" name="searchtxt" placeholder="Search for courses..." class="searchtxt">
+                <input type="submit" name="search" class="searchbtn" value=".">
+            </div>
+            <select class="dropdown navitem" name="" id="" title="Select an option">
+                <option value="">Our Courses</option>
+                <option value="">Opt2</option>
+            </select>
+            <a href="/Free Seminar/fsem.html" class="navitem fseminar" id="fsem">Free Seminar</a>
+            <a href="./LoginPaga.html " class="navitem login" id="login">Log in</a>
+
+
+        </nav>
+        <script src="login.js"></script>
+
+    </div>
+    <div class="form">
+        <form action="login.php" method="post">
+            <div class="form-structor">
+                <div class="signup">
+                    <h2 class="form-title" id="signup"><span>or</span>Login</h2>
+                    <div class="form-holder">
+                         
+                        <input type="email" class="input" placeholder="Email" name="email" />
+                        <input type="password" class="input" placeholder="Password" name="password" />
+                    </div>
+                    <button class="submit-btn" type="submit" name="submit">Login</button>
+
+                </div>
+                
+                <div class="login slide-up">
+                    <div class="center">
+                        <h2 class="form-title" id="login"><span>or</span><a href="../index.php">Go Back</a></h2>
+                        <!-- <div class="form-holder">
+                            <input type="email" class="input" placeholder="Email" name="email" />
+                            <input type="password" class="input" placeholder="Password" name="pass" />
+                        </div> -->
+                        <button class="submit-btn" type="submit" name="login">Login</button>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+
+
+
+</body>
+
+</html>
