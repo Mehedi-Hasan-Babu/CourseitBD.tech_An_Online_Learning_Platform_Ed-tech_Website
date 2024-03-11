@@ -61,6 +61,10 @@
             background-color: #007bff;
             color: #fff;
         }
+        .Report {
+            background-color: wheat;
+            color: #333;
+        }
 
         .btn {
             display: inline-block;
@@ -82,6 +86,7 @@
     <header> 
         <img src="profile-icon.png" alt="Profile Icon">
         Welcome, User!
+        
     </header>
     <a href="../index.php" class="btn btn-primary text-center" style="background-color:#637AFA;color:white ;margin:3px;">Go to Webpage >> </a>
 
@@ -103,6 +108,13 @@
             <p>Manage Course Information</p>
             <a href="Courses/index.php" class="btn">Go to Courses Page</a>
         </div>
+
+        <div class="card Report">
+            <h3>Crystal Report</h3>
+            <p>Get The Company Report Here</p>
+            <a href="Students/All_Report.php" class="btn">Go to Report View Page</a>
+        </div>
+        
     </div>
 
 </body>

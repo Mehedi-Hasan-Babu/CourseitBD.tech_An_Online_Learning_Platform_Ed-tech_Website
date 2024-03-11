@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
                 <option value="">Our Courses</option>
                 <option value="">Opt2</option>
             </select>
-            <a href="/Free Seminar/fsem.html" class="navitem fseminar">Free Seminar</a>
+            <a href="../Free Seminar/fsem.html" class="navitem fseminar">Free Seminar</a>
             <a href="../Login/LoginPaga.html" class="navitem login" id="login">Log in</a>
             
 
@@ -79,12 +79,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
 
         <header class="banner item">
             <div class="content"> 
-               
-                <p>Course Title</p>
-                <h1>Course Name</h1>
-                <p>Course Description</p>
-            
-                Course Details Here............</div>
+                <?php
+                    $courseId = $_GET['c_id'];
+                    $_SESSION['c_id'] = $courseId;
+            $courseDetailsQuery = "SELECT * FROM courses WHERE c_id = $courseId";
+                    $courseDetailsResult = mysqli_query($conn, $courseDetailsQuery);
+                    $courseDetails = mysqli_fetch_assoc($courseDetailsResult);
+                    $_SESSION['c_name'] = $courseDetails['c_name'];
+                    $_SESSION['description'] = $courseDetails['description'];
+
+                    ?>
+                <p>Course Title </p>
+                <h1>  
+                <?php
+                            if (isset($_SESSION['c_id'])) {
+                                echo $_SESSION['c_name'];
+                            }
+                            ?></h1>
+                <p>Course Description:</p>
+                <?php
+              
+                            if (isset($_SESSION['c_id'])) {
+                                echo $_SESSION['description'];
+                            }
+                            ?></div>
             <div class="image">
                 
              </div>
@@ -94,14 +112,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
         </header>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <input type="hidden" name="course_id" value="<?php echo htmlspecialchars($_GET['c_id']); ?>">
-    <button type="submit" name="enroll_button">Enroll</button>
+    <button type="submit" name="enroll_button" class ="enroll_button">Enroll</button>
 </form>
 
 
         <main class="cards item">
          <!-- card1 -->
          <div class="card">
-            <div class="cardimg"></div>
+            <div class="cardimg1"></div>
             <div class="cardinfo">
                 <h4>Module 1</h4>
                 <h5>Introduction</h5>
@@ -121,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
         <!-- card2 -->
         <!-- card1 -->
         <div class="card">
-            <div class="cardimg"><img src="favicon.ico.png" alt=""></div>
+            <div class="cardimg2 "><img src="" alt=""></div>
             <div class="cardinfo">
                 <h4>Module 2</h4>
                 <h5>Test</h5>
@@ -141,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
         <!-- card2 -->
         <!-- card1 -->
         <div class="card">
-            <div class="cardimg"><img src="favicon.ico.png" alt=""></div>
+            <div class="cardimg3"><img src=" " alt=""></div>
             <div class="cardinfo">
                 <h4>Module 3</h4>
                 <h5>Test</h5>
@@ -161,7 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
         <!-- card2 -->
         <!-- card1 -->
         <div class="card">
-            <div class="cardimg"><img src="favicon.ico.png" alt=""></div>
+            <div class="cardimg4"><img src=" " alt=""></div>
             <div class="cardinfo">
                 <h4>Module 4</h4>
                 <h5>Conclusion</h5>
@@ -180,8 +198,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enroll_button'])) {
         </div>
      </main>
 
-        <div class="infobox item">Infobox</div>
-        <footer class="footer item">Footer</footer>
+     <div class="infobox item">
+            <div id="sorryMessage" style=" 
+                font-family: 'Arial', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin: 0;
+                background-color: #e448d275;
+            
+    
+           
+                color: #ff0000;
+                font-size: 24px;
+                font-weight: bold;
+            "></div>
+
+            <script>
+                // JavaScript to dynamically display the "Sorry" message
+                document.getElementById('sorryMessage').innerText = 'Here You will get course details! Upcoming soon! Stay with us! Thank you';
+            </script>
+            </div>
+     
+        <script src="script.js"></script>
+   
+
+    <footer class="footer item">
+        <div class="footer-col ">
+            
+            <img src="../image/CourseitBGremoved2.png" style="height:40px; width: 20% inherit;" alt="CourseitBD">
+            <ul>
+                 <li><a href="./admin/adminLogin.php">Admin Login</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-col ">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="Our Team/team.html">Our Team</a></li>
+                <li><a href="#">Email : info.courseitbd@gmail.com</a></li>
+                <li><a href="#">Hotline :16260</a></li>
+                <li><a href="#">Dumki-8602,Patuakhali</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-col">
+            <h3>Quick Link</h3>
+            <ul>
+                <li><a href="#">Upcoming Live Batch</a></li>
+                <li><a href="#">Free Courses</a></li>
+                <li><a href="#">Live Work Shop</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="Fimg">
+           
+            <div class="credit">Created By <span>Mehedi Hasan Babu</span> ||All Rights Reserved!</div>
+
+
+        </div>
+    </footer>
         <script src="script.js"></script>
     </div>
 </body>

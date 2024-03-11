@@ -23,26 +23,14 @@ require 'dbcon.php';
         <?php include('message.php'); ?>
 
 
-        <div class="sidebar" style="height: 100%;
-            width: 250px;
-            position: fixed;
-            background-color: #111;
-            padding-top: 20px;
-            color: white;">
-            <h2>Sidebar</h2>
-            <p>Menu Item 1</p>
-            <p>Menu Item 2</p>
-            <p>Menu Item 3</p>
-            <!-- Add more menu items as needed -->
-        </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="card" style="background-color:bisque ; border-radius:5px">
                     <div class="card-header" style="background-color:aqua;">
                         <h4>Instructor Details
                         <a href="../access.php" class="btn btn-primary float-end" style="background-color:#637AFA;color:black  ;margin:3px;">Go Back >> </a>
-                            <a href="student-create.php" class="btn btn-primary float-end" style="background-color:#FFCD33;color:black ;  
+                        <a href="Report.php" class="btn btn-primary float-end" style="background-color:#637AFA;color:black  ;margin:3px;">Print</a>
+                         <a href="student-create.php" class="btn btn-primary float-end" style="background-color:#FFCD33;color:black ;  
                                 margin:3px;">Add Instructor Manually</a>
                             
  

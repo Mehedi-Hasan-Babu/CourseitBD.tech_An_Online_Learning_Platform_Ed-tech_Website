@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Seminar</title>
+    <title>Free Courses</title>
     <link rel="stylesheet" href="fc.css">
 </head>
 <body>
     <div class="container">
 
         <nav class="navbar item">
-            <div class="logo flexcenter navitem">Logo</div>
+            <div class=" flexcenter" id="Home"><a class="logo" href="../index.php"></a></div>
+            
             <div class="search flexcenter navitem">
                 <input type="text" name="searchtxt" placeholder="Search for courses..." class="searchtxt">
-                <input type="submit" name="search" class="searchbtn" value="Search" title="Search">
+                <input type="submit" name="search" class="searchbtn" value=". " title=" ">
             </div>
-            <select class="dropdown navitem" name="" id="" title="Select a course">
+            <select class="dropdown navitem" name="Our Courses" placeholder="Our Courses" id="" title="Select an option">
                 <option value="">Our Courses</option>
-                <option value="">Opt2</option>
+                <option value="">Crush Course Competetive Programming</option>
+                <option value="">Full Stack Web Development (MERN)</option>
+                <option value="">Web Development with PHP and Laravel</option>
+                <option value="">Foundation Of Javascript</option>
+                <option value="">Mobile Application Development With Flutter</option>
+                <option value="">Data Analysis</option>
+                <option value="">Product Management and Design</option>
+                <option value="">Cyber Security</option>
             </select>
-            <a href="#" class="navitem fseminar">Free Seminar</a>
-            <a href="#" class="navitem login" id="login">Log in</a>
+            <a href="../Free Seminar/fsem.html" class="navitem fseminar" id="fsem">Free Seminar</a>
+            <a href="../Login/LoginPaga.html" class="navitem login" id="login">Log in</a>
         </nav>
 
-        <header class="banner item">
-            <div class="content">Content</div>
+        <header class="banner item" style=" 
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        margin: 0;
+        background-color: #e67196e6;
+        color: #751c1c;
+        font-size: 24px;
+        font-weight: bold;
+    "> Sorry! Currently No Free Courses are available! 
+            <!-- <div class="content"></div>
             <div class="image">
-             </div>
+             </div> -->
         </header>
 
         <main class="cards item">
@@ -35,7 +54,7 @@
             <div class="cardimg"></div>
             <div class="cardinfo">
                 <h4>Digital Marketing</h4>
-                <h5>600 Taka</h5>
+                <h5><strike>600 Taka  </strike> <br>Free!</h5>
                 <div class="info">
                     <div class="info1">
                         <div class="infoimg1"></div>
@@ -54,8 +73,8 @@
         <div class="card">
             <div class="cardimg"></div>
             <div class="cardinfo">
-                <h4>Digital Marketing</h4>
-                <h5>600 Taka</h5>
+                <h4>Python</h4>
+                <h5><strike>600 Taka  </strike> <br>Free!</h5>
                 <div class="info">
                     <div class="info1">
                         <div class="infoimg1"></div>
@@ -74,8 +93,8 @@
         <div class="card">
             <div class="cardimg"></div>
             <div class="cardinfo">
-                <h4>Digital Marketing</h4>
-                <h5>600 Taka</h5>
+                <h4>Art of Story Telling</h4>
+                <h5><strike>600 Taka  </strike> <br>Free!</h5>
                 <div class="info">
                     <div class="info1">
                         <div class="infoimg1"></div>
@@ -94,8 +113,8 @@
         <div class="card">
             <div class="cardimg"></div>
             <div class="cardinfo">
-                <h4>Digital Marketing</h4>
-                <h5>600 Taka</h5>
+                <h4>Programming in C++</h4>
+                <h5><strike>600 Taka  </strike> <br>Free!</h5>
                 <div class="info">
                     <div class="info1">
                         <div class="infoimg1"></div>
@@ -111,9 +130,80 @@
         </div>
      </main>
 
-        <div class="infobox item">Infobox</div>
-        <footer class="footer item">Footer</footer>
+        <div class="infobox item">
+            <div id="sorryMessage" style=" 
+                font-family: 'Arial', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin: 0;
+                background-color: #e448d275;
+            
+    
+           
+                color: #ff0000;
+                font-size: 24px;
+                font-weight: bold;
+            "></div>
+
+            <script>
+                // JavaScript to dynamically display the "Sorry" message
+                document.getElementById('sorryMessage').innerText = 'Sorry for the inconvenience!';
+            </script>
+            </div>
+     
         <script src="script.js"></script>
-    </div>
+   
+
+    <footer class="footer item">
+        <div class="footer-col ">
+            
+            <img src="../image/CourseitBGremoved2.png" style="height:40px; width: 20% inherit;" alt="CourseitBD">
+            <ul>
+                 <li><a href="./admin/adminLogin.php">Admin Login</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-col ">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="Our Team/team.html">Our Team</a></li>
+                <li><a href="#">Email : info.courseitbd@gmail.com</a></li>
+                <li><a href="#">Hotline :16260</a></li>
+                <li><a href="#">Dumki-8602,Patuakhali</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-col">
+            <h3>Quick Link</h3>
+            <ul>
+                <li><a href="#">Upcoming Live Batch</a></li>
+                <li><a href="#">Free Courses</a></li>
+                <li><a href="#">Live Work Shop</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+        <div class="Fimg">
+           
+            <div class="credit">Created By <span>Mehedi Hasan Babu</span> ||All Rights Reserved!</div>
+
+
+        </div>
+    </footer>
+</div>
+
 </body>
 </html>

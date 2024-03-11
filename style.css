@@ -193,7 +193,7 @@ body {
 .next p{
     
     font-size: 10px;
-    font-weight: ;
+ 
 }
  
  .content h1{
@@ -397,14 +397,14 @@ body {
     background-position: center;
 }
 .card .cardimg1 {
-    height: 62%; 
+    height:100%; 
     width: 100%; 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
     object-fit: cover; 
     overflow: hidden;
-    background-size: 150%;
+    /* background-size: 150%; */
 }
 
 
@@ -585,17 +585,17 @@ body {
 }
     /* Style for visited links */
     .footer-col ul li a:visited {
-        color: #ffffff; /* Change this to your desired color for visited links */
+        color: #1ae3e6; /* Change this to your desired color for visited links */
     }
 
     /* Style for hovered links */
     .footer-col ul li a:hover {
-        color: #2980b9; /* Change this to your desired color for hovered links */
+        color: #e836e5; /* Change this to your desired color for hovered links */
     }
 
     /* Style for active links (when clicked) */
     .footer-col ul li a:active {
-        color: #2c3e50; /* Change this to your desired color for active links */
+        color: #d2ce0d; /* Change this to your desired color for active links */
     }
 
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
 /* 
 * {
     margin: 0px;
@@ -155,6 +156,17 @@ body {
     background-color: aquamarine;
 }
 
+.logo {
+    width: 220px;
+    background-image: url("../image/CourseitBGremoved2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10px;
+    
+}
 
 
 /* Navbar */
@@ -164,6 +176,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #f4f4f4;
+    height: 55px;
 }   
 
 .navbar .navitem {

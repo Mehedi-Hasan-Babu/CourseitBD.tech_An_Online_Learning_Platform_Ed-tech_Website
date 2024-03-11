@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Student Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class=" flexcenter" id="Home" style="align-items: center; justify-content: center;"><a class="logo" href="../index.php"><img src="../image/CourseitBGremoved2.png" alt=""></a></div>
     <div class="container">
         <h2>Student Profile</h2>
         <?php
@@ -23,7 +25,7 @@
             <label for="phone">Phone:</label>
             <input type="tel" name="phone" value="<?php echo $phone; ?>" required>
 
-            <label for="course">Course:</label>
+            <label for="course">Education:</label>
             <input type="text" name="course" value="<?php echo $course; ?>" required>
 
             <label for="password">Password:</label>

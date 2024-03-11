@@ -26,11 +26,11 @@ if (isset($_GET['logout'])) {
     <div class="container">
 
         <nav class="navbar item">
-            <div class="logo flexcenter " id="Home"> </div>
-
+            <div class=" flexcenter" id="Home"><a class="logo" href="./index.php"></a></div>
+            
             <div class="search flexcenter navitem">
                 <input type="text" name="searchtxt" placeholder="Search for courses..." class="searchtxt">
-                <input type="submit" name="search" class="searchbtn" value=" ." title=" ">
+                <input type="submit" name="search" class="searchbtn" value=" " title=" ">
             </div>
             <select class="dropdown navitem" name="Our Courses" placeholder="Our Courses" id="" title="Select an option">
                 <option value="">Our Courses</option>
@@ -68,7 +68,7 @@ if (isset($_GET['logout'])) {
                     <h1 style="color:blueviolet">Any Where , Any Time ,
                         <span style="color:blueviolet"> Learn Everyday </span>
                     </h1>
-                    <p>
+                    <p style="color:#404040">
                     <h3>Choose Courses From A Vast </h3>
                     <h3> Selection At The Most Competitive Rate</>
                         </p>
@@ -326,7 +326,7 @@ mysqli_close($conn);
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Programming Basic With C</h4>
-                    <h5>0 Taka</h5>
+                    <h5><strike>500 Taka  </strike> <br>Free!</h5>
                     <div class="info">
                         <div class="info1">
                             <div class="infoimg1"></div>
@@ -346,7 +346,7 @@ mysqli_close($conn);
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Python For Begginers</h4>
-                    <h5>0 Taka</h5>
+                    <h5><strike>600 Taka  </strike> <br>Free!</h5>
                     <div class="info">
                         <div class="info1">
                             <div class="infoimg1"></div>
@@ -366,7 +366,7 @@ mysqli_close($conn);
                 <div class="cardimg"></div>
                 <div class="cardinfo">
                     <h4>Art Of Story Telling</h4>
-                    <h5>0 Taka</h5>
+                    <h5><strike>300 Taka  </strike> <br>Free!</h5>
                     <div class="info">
                         <div class="info1">
                             <div class="infoimg1"></div>
@@ -489,7 +489,7 @@ mysqli_close($conn);
     <footer class="footer item">
         <div class="footer-col ">
             
-            <img src="./image/CourseitBGremoved2.png" style="height:40px; width: 40px inherit;" alt="">
+            <img src="./image/CourseitBGremoved2.png" style="height:40px; width: 20% inherit;" alt="CourseitBD">
             <ul>
                  <li><a href="./admin/adminLogin.php">Admin Login</a></li>
                 <li><a href="#">Facebook</a></li>
@@ -501,9 +501,9 @@ mysqli_close($conn);
             <h3>Contact Us</h3>
             <ul>
                 <li><a href="Our Team/team.html">Our Team</a></li>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Hotline</a></li>
-                <li><a href="#">Adress</a></li>
+                <li><a href="#">Email : info.courseitbd@gmail.com</a></li>
+                <li><a href="#">Hotline :16260</a></li>
+                <li><a href="#">Dumki-8602,Patuakhali</a></li>
             </ul>
 
         </div>
